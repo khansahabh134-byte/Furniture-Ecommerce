@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | Furnish &amp; Co.</title>
+  <meta name="description" content="Browse our full collection of modern, minimal furniture — filter by category, price, material and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%234B6B3C'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='white' font-family='Georgia,serif'%3EF%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body>
+  <div class="preloader"><div class="loader-mark"></div></div>
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span><i class="fa-solid fa-truck"></i>&nbsp; Free shipping on orders over $500</span>
+        <span>Follow the Autumn Collection launch</span>
+      </div>
+      <div class="topbar-right">
+        <a href="tel:+18005551234"><i class="fa-solid fa-phone"></i> +1 (800) 555-1234</a>
+        <a href="faq.html">Help</a>
+        <a href="#" data-theme-toggle title="Toggle dark mode"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></a>
+      </div>
+    </div>
+  </div>
+  <header class="navbar-main">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Furnish<span>&amp;Co.</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="category.html">Categories</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="nav-icon-btn" data-search-trigger title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a href="login.html" class="nav-icon-btn" title="Account"><i class="fa-regular fa-user"></i></a>
+        <a href="wishlist.html" class="nav-icon-btn" title="Wishlist"><i class="fa-regular fa-heart"></i><span class="badge-count" data-wish-count>0</span></a>
+        <a href="cart.html" class="nav-icon-btn" title="Cart"><i class="fa-solid fa-bag-shopping"></i><span class="badge-count" data-cart-count>0</span></a>
+        <button class="nav-burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="scroll-progress"></div>
+
+  <div class="nav-overlay"></div>
+  <div class="mobile-nav">
+    <button class="mobile-nav-close"><i class="fa-solid fa-xmark"></i></button>
+    <a href="index.html" class="logo">Furnish<span>&amp;Co.</span></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="category.html">Categories</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="login.html">My Account</a></li>
+    </ul>
+  </div>
+
+  <div class="search-popup">
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search for sofas, tables, lighting...">
+      <button class="search-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+  </div>
+
+    <section class="page-header">
+    <div class="container">
+      <h1 data-aos="fade-up">Shop All Furniture</h1>
+      <div class="breadcrumb" data-aos="fade-up" data-aos-delay="100">
+        <a href="index.html">Home</a> <span>/</span> <span>Shop</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="shop-layout">
+        <aside>
+          <div class="filter-box">
+            <h5>Categories</h5>
+            <div class="filter-list">
+              <label><input type="checkbox" checked> Living Room</label>
+              <label><input type="checkbox"> Bedroom</label>
+              <label><input type="checkbox"> Dining</label>
+              <label><input type="checkbox"> Office</label>
+              <label><input type="checkbox"> Outdoor</label>
+              <label><input type="checkbox"> Kitchen</label>
+              <label><input type="checkbox"> Lighting</label>
+            </div>
+          </div>
+          <div class="filter-box">
+            <h5>Price Range</h5>
+            <input type="range" class="price-range" min="0" max="2000" value="1400">
+            <div style="display:flex;justify-content:space-between;font-size:.82rem;color:var(--color-dark-soft);margin-top:8px;">
+              <span>$0</span><span>$2,000</span>
+            </div>
+          </div>
+          <div class="filter-box">
+            <h5>Color</h5>
+            <div class="color-swatches">
+              <span style="background:#222" title="Black"></span>
+              <span style="background:#8a6a4a" title="Oak"></span>
+              <span style="background:#d8cdb8 " title="Beige"></span>
+              <span style="background:#4B6B3C" title="Green"></span>
+              <span style="background:#5c4432" title="Walnut"></span>
+              <span style="background:#b5453b" title="Rust"></span>
+              <span style="background:#fff;box-shadow:0 0 0 1px #ddd" title="White"></span>
+            </div>
+          </div>
+          <div class="filter-box">
+            <h5>Material</h5>
+            <div class="filter-list">
+              <label><input type="checkbox"> Solid Oak</label>
+              <label><input type="checkbox"> Walnut Veneer</label>
+              <label><input type="checkbox"> Boucle Fabric</label>
+              <label><input type="checkbox"> Full-Grain Leather</label>
+              <label><input type="checkbox"> Rattan</label>
+            </div>
+          </div>
+          <div class="filter-box">
+            <h5>Rating</h5>
+            <div class="rating-filter">
+              <label><input type="checkbox"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> &amp; up</label>
+              <label><input type="checkbox"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> &amp; up</label>
+              <label><input type="checkbox"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> &amp; up</label>
+            </div>
+          </div>
+          <div class="filter-box">
+            <h5>Availability</h5>
+            <div class="filter-list">
+              <label><input type="checkbox" checked> In Stock</label>
+              <label><input type="checkbox"> Pre-Order</label>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block ripple">Apply Filters</button>
+        </aside>
+
+        <div>
+          <div class="shop-toolbar">
+            <p style="font-size:.9rem;color:var(--color-dark-soft);">Showing <b>1&ndash;16</b> of <b>128</b> results</p>
+            <button class="btn btn-outline btn-sm" data-filter-toggle style="display:none;" id="mobileFilterBtn"><i class="fa-solid fa-sliders"></i> Filters</button>
+            <div style="display:flex;align-items:center;gap:14px;">
+              <select>
+                <option>Sort by: Featured</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Newest First</option>
+                <option>Top Rated</option>
+              </select>
+              <div class="view-toggle">
+                <button class="active" data-view="grid"><i class="fa-solid fa-grip"></i></button>
+                <button data-view="list"><i class="fa-solid fa-list"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-grid shop-grid">
+            <div class="product-card" data-aos="fade-up" data-aos-delay="0" data-product data-id="s0" data-name="Willow Curved Sofa" data-price="1249" data-img="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            <span class="pbadge sale">Sale</span>
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80&auto=format&fit=crop" alt="Willow Curved Sofa" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=500&q=80&auto=format&fit=crop" alt="Willow Curved Sofa" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Living Room</p>
+            <h3 class="product-name"><a href="product-details.html">Willow Curved Sofa</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$1249.00</span><span class="price-old">$1499.00</span></div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="80" data-product data-id="s1" data-name="Ashfield Oak Dining Table" data-price="899" data-img="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            
+            <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=500&q=80&auto=format&fit=crop" alt="Ashfield Oak Dining Table" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=500&q=80&auto=format&fit=crop" alt="Ashfield Oak Dining Table" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Dining</p>
+            <h3 class="product-name"><a href="product-details.html">Ashfield Oak Dining Table</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$899.00</span></div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="160" data-product data-id="s2" data-name="Nora Lounge Armchair" data-price="459" data-img="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=500&q=80&auto=format&fit=crop" alt="Nora Lounge Armchair" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=500&q=80&auto=format&fit=crop" alt="Nora Lounge Armchair" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Living Room</p>
+            <h3 class="product-name"><a href="product-details.html">Nora Lounge Armchair</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$459.00</span></div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="240" data-product data-id="s3" data-name="Haven Platform Bed" data-price="1099" data-img="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            <span class="pbadge sale">Sale</span>
+            <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=500&q=80&auto=format&fit=crop" alt="Haven Platform Bed" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=500&q=80&auto=format&fit=crop" alt="Haven Platform Bed" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Bedroom</p>
+            <h3 class="product-name"><a href="product-details.html">Haven Platform Bed</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$1099.00</span><span class="price-old">$1299.00</span></div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="0" data-product data-id="s4" data-name="Elm Bookshelf Unit" data-price="389" data-img="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            
+            <img src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=500&q=80&auto=format&fit=crop" alt="Elm Bookshelf Unit" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=80&auto=format&fit=crop" alt="Elm Bookshelf Unit" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Office</p>
+            <h3 class="product-name"><a href="product-details.html">Elm Bookshelf Unit</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$389.00</span></div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="80" data-product data-id="s5" data-name="Halden Task Chair" data-price="329" data-img="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            <span class="pbadge sale">Sale</span>
+            <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=500&q=80&auto=format&fit=crop" alt="Halden Task Chair" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&q=80&auto=format&fit=crop" alt="Halden Task Chair" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Office</p>
+            <h3 class="product-name"><a href="product-details.html">Halden Task Chair</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$329.00</span><span class="price-old">$399.00</span></div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="160" data-product data-id="s6" data-name="Solace Rattan Lounger" data-price="549" data-img="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            
+            <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=500&q=80&auto=format&fit=crop" alt="Solace Rattan Lounger" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500&q=80&auto=format&fit=crop" alt="Solace Rattan Lounger" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Outdoor</p>
+            <h3 class="product-name"><a href="product-details.html">Solace Rattan Lounger</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$549.00</span></div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="240" data-product data-id="s7" data-name="Amber Ceramic Lamp" data-price="89" data-img="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            <span class="pbadge sale">Sale</span>
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=80&auto=format&fit=crop" alt="Amber Ceramic Lamp" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=500&q=80&auto=format&fit=crop" alt="Amber Ceramic Lamp" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Lighting</p>
+            <h3 class="product-name"><a href="product-details.html">Amber Ceramic Lamp</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$89.00</span><span class="price-old">$119.00</span></div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="0" data-product data-id="s8" data-name="Birchwood Console Table" data-price="299" data-img="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&q=80&auto=format&fit=crop" alt="Birchwood Console Table" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1522771930-78848d9293e8?w=500&q=80&auto=format&fit=crop" alt="Birchwood Console Table" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Living Room</p>
+            <h3 class="product-name"><a href="product-details.html">Birchwood Console Table</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$299.00</span></div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="80" data-product data-id="s9" data-name="Ridge Sectional Sofa" data-price="1699" data-img="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            <span class="pbadge sale">Sale</span>
+            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=500&q=80&auto=format&fit=crop" alt="Ridge Sectional Sofa" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1592078615290-033ee584e267?w=500&q=80&auto=format&fit=crop" alt="Ridge Sectional Sofa" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Living Room</p>
+            <h3 class="product-name"><a href="product-details.html">Ridge Sectional Sofa</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$1699.00</span><span class="price-old">$1999.00</span></div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="160" data-product data-id="s10" data-name="Linen Accent Chair" data-price="379" data-img="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            <span class="pbadge new">New</span>
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=500&q=80&auto=format&fit=crop" alt="Linen Accent Chair" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?w=500&q=80&auto=format&fit=crop" alt="Linen Accent Chair" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Living Room</p>
+            <h3 class="product-name"><a href="product-details.html">Linen Accent Chair</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$379.00</span></div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="240" data-product data-id="s11" data-name="Marlow Coffee Table" data-price="349" data-img="https://images.unsplash.com/photo-1522771930-78848d9293e8?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            
+            <img src="https://images.unsplash.com/photo-1522771930-78848d9293e8?w=500&q=80&auto=format&fit=crop" alt="Marlow Coffee Table" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500&q=80&auto=format&fit=crop" alt="Marlow Coffee Table" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Living Room</p>
+            <h3 class="product-name"><a href="product-details.html">Marlow Coffee Table</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$349.00</span></div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="0" data-product data-id="s12" data-name="Cove Bar Stool Set" data-price="219" data-img="https://images.unsplash.com/photo-1592078615290-033ee584e267?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            <span class="pbadge sale">Sale</span>
+            <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?w=500&q=80&auto=format&fit=crop" alt="Cove Bar Stool Set" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=500&q=80&auto=format&fit=crop" alt="Cove Bar Stool Set" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Kitchen</p>
+            <h3 class="product-name"><a href="product-details.html">Cove Bar Stool Set</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$219.00</span><span class="price-old">$259.00</span></div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="80" data-product data-id="s13" data-name="Fern Rattan Mirror" data-price="159" data-img="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            
+            <img src="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?w=500&q=80&auto=format&fit=crop" alt="Fern Rattan Mirror" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80&auto=format&fit=crop" alt="Fern Rattan Mirror" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Living Room</p>
+            <h3 class="product-name"><a href="product-details.html">Fern Rattan Mirror</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$159.00</span></div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="160" data-product data-id="s14" data-name="Kessler Media Console" data-price="529" data-img="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500&q=80&auto=format&fit=crop" alt="Kessler Media Console" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=500&q=80&auto=format&fit=crop" alt="Kessler Media Console" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Living Room</p>
+            <h3 class="product-name"><a href="product-details.html">Kessler Media Console</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$529.00</span></div>
+          </div>
+        </div>
+        <div class="product-card" data-aos="fade-up" data-aos-delay="240" data-product data-id="s15" data-name="Petra Outdoor Bench" data-price="289" data-img="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=500&q=80&auto=format&fit=crop">
+          <div class="product-thumb">
+            <span class="pbadge new">New</span>
+            <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=500&q=80&auto=format&fit=crop" alt="Petra Outdoor Bench" loading="lazy">
+            <img class="img-alt" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=500&q=80&auto=format&fit=crop" alt="Petra Outdoor Bench" loading="lazy">
+            <div class="product-quick-actions">
+              <button class="pq-btn" data-wishlist-btn title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="pq-btn" data-quickview title="Quick view"><i class="fa-solid fa-eye"></i></button>
+              <button class="pq-btn" title="Compare"><i class="fa-solid fa-arrows-left-right"></i></button>
+            </div>
+            <div class="product-add ripple" data-add-cart>Add to Cart</div>
+          </div>
+          <div class="product-info">
+            <p class="product-cat">Outdoor</p>
+            <h3 class="product-name"><a href="product-details.html">Petra Outdoor Bench</a></h3>
+            <div class="product-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> <span>(4.20)</span></div>
+            <div class="product-price"><span class="price-now">$289.00</span></div>
+          </div>
+        </div>
+          </div>
+
+          <div class="pagination">
+            <a href="#"><i class="fa-solid fa-angle-left"></i></a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">...</a>
+            <a href="#">8</a>
+            <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-overlay qv-modal-overlay">
+    <div class="qv-modal" style="position:relative;">
+      <button class="modal-close" data-modal-close><i class="fa-solid fa-xmark"></i></button>
+      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80&auto=format&fit=crop" alt="Product">
+      <div>
+        <p class="pd-cat">Living Room</p>
+        <h3 class="pd-title" style="font-size:1.5rem;">Willow Curved Sofa</h3>
+        <div class="product-rating" style="margin-bottom:14px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span>(4.90)</span></div>
+        <div class="pd-price" style="font-size:1.4rem;">$1,249.00 <span class="price-old" style="font-size:1rem;">$1,499.00</span></div>
+        <p class="pd-desc">A gently curved silhouette upholstered in sage boucle, set on solid oak legs.</p>
+        <a href="product-details.html" class="btn btn-primary ripple" style="width:100%;">View Full Details</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="logo">Furnish<span>&amp;Co.</span></a>
+          <p>Thoughtfully designed furniture for modern homes — built from responsibly sourced materials, made to last generations.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Journal</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="category.html">Living Room</a></li>
+            <li><a href="category.html">Bedroom</a></li>
+            <li><a href="category.html">Dining</a></li>
+            <li><a href="category.html">Office</a></li>
+            <li><a href="category.html">Outdoor</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Customer Support</h5>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> 128 Maple Grove Ave, Portland, OR</li>
+            <li><i class="fa-solid fa-envelope"></i> hello@furnishandco.com</li>
+            <li><i class="fa-solid fa-phone"></i> +1 (800) 555-1234</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Furnish &amp; Co. All rights reserved.</p>
+        <div>
+          <a href="privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="terms.html">Terms of Service</a>
+        </div>
+        <div class="pay-icons">
+          <i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-paypal"></i><i class="fa-brands fa-cc-amex"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/slider.js"></script>
+</body>
+</html>
